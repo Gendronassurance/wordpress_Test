@@ -1,6 +1,7 @@
 # You can change this to a different version of Wordpress available at
 # https://hub.docker.com/_/wordpress
-FROM wordpress:5.3.2-apache
+# Use a newer version of WordPress with PHP 8.2
+FROM wordpress:6.5.2-php8.2-apache
 
 RUN apt-get update && apt-get install -y magic-wormhole
 
