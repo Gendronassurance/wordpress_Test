@@ -10,8 +10,7 @@ RUN apt-get update && apt-get install -y \
 RUN usermod -s /bin/bash www-data
 RUN chown www-data:www-data /var/www
 
-# Copy .htpasswd into the image
-COPY .htpasswd /etc/apache2/.htpasswd
+
 
 # Enable Apache modules
 RUN a2enmod auth_basic
