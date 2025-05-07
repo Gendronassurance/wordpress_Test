@@ -10,4 +10,7 @@ RUN apt-get update && apt-get install -y \
 RUN usermod -s /bin/bash www-data
 RUN chown www-data:www-data /var/www
 
+# Copy custom php.ini into PHP config directory
+COPY php.ini /usr/local/etc/php/conf.d/custom.ini
+
 USER www-data:www-data
